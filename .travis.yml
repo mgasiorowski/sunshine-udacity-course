@@ -17,5 +17,9 @@ before_install:
 
   # for gradle output style
   - export TERM=dumb
+  - wget https://services.gradle.org/distributions/gradle-2.1-bin.zip
+  - unzip gradle-2.1-bin.zip
+  - export GRADLE_HOME=$PWD/gradle-2.1
+  - export PATH=$GRADLE_HOME/bin:$PATH
 
 script: gradle assembleDebug
